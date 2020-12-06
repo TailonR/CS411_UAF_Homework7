@@ -56,14 +56,14 @@ void BinHeap::updatePriority(int nodeValue, int newNodePriority){
     // The reason for the "+1" is due to the fact that at() returns 0 if the key is not in the map
     //      However, the root of the tree is at index 0, therefore there was no way to distinguish the difference
     //          without traversing _lookup each time
-    auto nodeIndex = _lookup.at(nodeValue)? _lookup[nodeValue]: -1;
+    auto nodeIndex = _lookup.at(nodeValue)? _lookup[nodeValue]-1: -1;
     if (nodeIndex != -1) {
-        _nodes[nodeIndex-1].priority = newNodePriority;
+        _nodes[nodeIndex].priority = newNodePriority;
     }
-    if(((nodeIndex-1)-1)/2 > 0 && _nodes[((nodeIndex-1)-1)/2].priority < _nodes[nodeIndex-1].priority)
-        siftUp(nodeIndex-1);
+    if((nodeIndex-1)/2 > 0 && _nodes[(nodeIndex-1)/2].priority < _nodes[nodeIndex].priority)
+        siftUp(nodeIndex);
     else
-        siftDown(nodeIndex-1);
+        siftDown(nodeIndex);
 }
 
 //root()
