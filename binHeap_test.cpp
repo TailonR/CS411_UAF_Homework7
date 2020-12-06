@@ -21,6 +21,7 @@ TEST_CASE("Testing binHeap constructors") {
                               Node{8, 25},
                               Node{77, 27}};
     BinHeap newHeap2(data);
+    std::cout << newHeap2 << std::endl;
     CHECK(newHeap.getNumOfNodes() == 0);
     CHECK(newHeap2.getNumOfNodes() == data.size());
 }

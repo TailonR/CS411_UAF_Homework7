@@ -5,6 +5,9 @@
 
 #ifndef HOMEWORK7_NODE_H
 #define HOMEWORK7_NODE_H
+
+//class Node
+// Invariants: None
 class Node{
 public:
     int value;

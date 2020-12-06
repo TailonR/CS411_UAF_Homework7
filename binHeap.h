@@ -12,6 +12,8 @@
 #include <optional>
 #include "node.h"
 
+//class BinHeap
+//Invariants: None
 class BinHeap{
     friend bool operator==(const BinHeap & lhs, const BinHeap & rhs);
     friend std::ostream& operator<<(std::ostream & output, const BinHeap & rhs);
