@@ -26,7 +26,7 @@ The binary heap contains nodes which are represented by the class Node, which ha
 updatePriority looks for the node with value specified by nodeValue and then changes the priority of that node. It then
 checks if the new priority is larger or smaller than it's parent, if it is, the node will be sifted up, if it's not, 
 then it will be sifted down. Note: _lookup is an auxiliary map that keeps track of the indices of the various nodes so 
-that updatePriority is O(logn) rather than 0(n). Each entry in _lookup is indexed by the value of the node.
+that updatePriority is O(logn) rather than O(n). Each entry in _lookup is indexed by the value of the node.
 
 # License
 [MIT](https://choosealicense.com/licenses/mit/)
