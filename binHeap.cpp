@@ -100,9 +100,10 @@ std::optional<int> BinHeap::root() {
 //Error: None
 void BinHeap::deleteRoot() {
     auto elementToBeDeleted = _nodes.begin()->value;
-    _nodes.erase(_nodes.begin());
+    std::swap(_nodes[0], _nodes[_nodes.size()-1]);
+    _nodes.pop_back();
     _lookup.erase(elementToBeDeleted);
-    heapify();
+    siftDown(0);
 }
 
 //heapify()
